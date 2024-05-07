@@ -1,5 +1,3 @@
-Sure, here's an exercise related to the topic of creating a stored procedure in a database:
-
 ## Exercise: Create a Stored Procedure
 
 ### Task:
