@@ -1,8 +1,18 @@
-## Exercise: Create a Stored Procedure
+# Exercise: Create a Stored Procedure
 
-### Task:
+## Objective:
+Design a stored procedure to transfer data from a transactional database to a staging area, then load it into a data warehouse (fact and dimension tables), and datamart.
 
-Create a stored procedure named `UpdateProductPrice` in a database system of your choice. The procedure should take two parameters: `product_id` (INT) and `new_price` (DECIMAL). The purpose of the procedure is to update the price of a product identified by its ID.
+## Requirements:
+- Basic understanding of SQL
+- Access to a database management system (DBMS) such as PostgreSQL, etc.
+
+## Task:
+Design a stored procedure named `dwh.generate_employee()` to perform the following tasks:
+1. Transfer data from the transactional database tables to corresponding staging tables.
+2. Load data from staging tables into appropriate dimension tables in the data warehouse.
+3. Load data from staging tables into appropriate fact tables in the data warehouse.
+5. Provide clear documentation within the stored procedure.
 
 ### Steps to Follow:
 
@@ -27,10 +37,8 @@ END
 ```
 
 ### Notes:
-
-- Replace `products` with the actual table name in your database.
 - Ensure proper error handling and validation in the procedure for real-world scenarios.
-- Test the procedure with various product IDs and prices to ensure its reliability.
+- Test the procedure  to ensure its reliability.
 
 ### Conclusion:
 
