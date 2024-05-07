@@ -1,4 +1,4 @@
-# Exercise: Create a Stored Procedure
+# Exercise: ETL with Stored Procedure
 
 ## Objective:
 Design a stored procedure to transfer data from a transactional database to a staging area, then load it into a data warehouse (fact and dimension tables), and datamart.
