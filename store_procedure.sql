@@ -65,7 +65,7 @@ BEGIN
         stg.stg_employee_transaction AS src 
     WHERE NOT EXISTS (
         SELECT 1
-        FROM fact_employee_performance AS fact
+        FROM dwh.fact_employee_performance AS fact
         WHERE 
             COALESCE(fact.performance_id, 0) = COALESCE(src.performance_id, 0) AND
             COALESCE(fact.employee_id, 0) = COALESCE(src.employee_id, 0) AND
@@ -91,13 +91,13 @@ BEGIN
         ed.education_level,
         f.last_update 
     FROM 
-        fact_employee_performance f
+        dwh.fact_employee_performance f
     LEFT JOIN 
-        dim_employee e ON f.employee_id = e.employee_id
+        dwh.dim_employee e ON f.employee_id = e.employee_id
     LEFT JOIN 
-        dim_department d ON e.department_id = d.department_id
+        dwh.dim_department d ON e.department_id = d.department_id
     LEFT JOIN 
-        dim_education ed ON e.education_id = ed.education_id;
+        dwh.dim_education ed ON e.education_id = ed.education_id;
     
     CREATE TABLE IF NOT EXISTS dm.dm_employee_transaction AS
     SELECT * 
